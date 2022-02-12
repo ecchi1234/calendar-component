@@ -1,0 +1,55 @@
+.dialer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+
+  .dialer-body__dialer {
+    input {
+      border: none;
+      height: 32px;
+      background: #f8fafc;
+      border-radius: 4px;
+      text-align: center;
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+
+    .dialer-body__numbers {
+      margin-top: 16px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      column-gap: 8px;
+      row-gap: 8px;
+
+      .dialer-body__number {
+        user-select: none;
+        background: #f8fafc;
+        border-radius: 4px;
+        height: 46px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 32px;
+        color: #283c5c;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .dialer-body__call {
+      margin-top: 8px;
+      height: 40px;
+
+      button {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+.page__detail--approve {
+  .page__detail-tabs {
+    .general-field__container {
+      display: flex;
+      flex-direction: column;
+
+      .general-field__first-row {
+        span {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 12px;
+          line-height: 150%;
+          color: #979797;
+        }
+      }
+
+      .general-field__second-row {
+        .general-field__circle-image {
+          border-radius: 50%;
+          height: 32px;
+          width: 32px;
+          margin-right: 10px;
+        }
+
+        span {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 13px;
+          line-height: 18px;
+          color: #333333;
+        }
+      }
+
+      .general-field__second-row {
+        .general-field__circle-image {
+          border-radius: 50%;
+          height: 32px;
+          width: 32px;
+          margin-right: 10px;
+        }
+
+        span {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 13px;
+          line-height: 18px;
+          color: #333333;
+        }
+      }
+    }
+  }
+
+  .ant-descriptions-item-container .ant-descriptions-item-content,
+  .ant-descriptions-item-container .ant-descriptions-item-label {
+    font-size: 13px;
+    color: #979797;
+  }
+}

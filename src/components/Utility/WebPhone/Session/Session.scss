@@ -1,0 +1,73 @@
+.session {
+  .session__header {
+    display: flex;
+    height: 48px;
+
+    img {
+      height: 48px;
+      width: 48px;
+      border-radius: 4px;
+    }
+
+    .session__info {
+      flex-grow: 1;
+      margin-left: 8px;
+      padding: 8px;
+      display: flex;
+      flex-direction: column;
+      p {
+        margin: 0;
+        font-style: normal;
+        line-height: 16px;
+
+        &.session__info__name {
+          font-weight: normal;
+          font-size: 12px;
+          color: #50b5ff;
+        }
+
+        &.session__info__uri {
+          font-weight: 300;
+          font-size: 10px;
+          color: #283c5c;
+        }
+      }
+    }
+
+    .session__status {
+      margin-left: 16px;
+      display: flex;
+      align-items: center;
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+
+  .session__note {
+    margin-top: 16px;
+
+    textarea {
+      height: 232px;
+      background: #F8FAFC;
+      border-radius: 4px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 16px;
+      color: #283C5C;
+      resize: none;
+    }
+  }
+
+  .session__action {
+    margin-top: 16px;
+    height: 40px;
+
+    button {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

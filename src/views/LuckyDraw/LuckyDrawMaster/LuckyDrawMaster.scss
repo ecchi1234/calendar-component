@@ -1,0 +1,148 @@
+@import "../../../assets/scss/utils/_variables.scss";
+.lucky-draw__master {
+  .ant-tabs-top {
+    .ant-tabs-nav-wrap {
+      justify-content: center;
+    }
+  }
+
+  .lucky-draw__description--turns {
+    color: #00b391;
+    font-weight: 700;
+  }
+
+  .lucky-draw__description--no-turns {
+    color: #dd425a;
+    font-weight: 700;
+  }
+
+  .lucky-draw__btn {
+    &.lucky-draw__btn--play-now {
+      border-radius: 8px;
+      background-color: $primary-color;
+      color: #fff;
+      font-weight: bold;
+    }
+    &.lucky-draw__btn--my-history {
+      .component_btn-text {
+        text-decoration: underline;
+        font-weight: bold;
+      }
+      &:hover {
+        border-radius: 8px;
+        background-color: #fbe5ea;
+        .component_btn-text {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+  .lucky-draw__description--wrapper {
+    color: #696a6b;
+    .lucky-draw__description--content {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+    }
+  }
+}
+.lucky-draw__title {
+  font-weight: bold;
+  font-size: 32px;
+  color: $primary-color;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.lucky-draw__item--wrapper {
+  .ant-card-cover {
+    img {
+      border-radius: 16px 16px 0 0;
+    }
+    border-radius: 16px !important;
+  }
+
+  .ant-card-meta-title {
+    white-space: normal;
+    color: #171725;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  border-radius: 16px !important;
+}
+
+.ant-tabs-tab-active {
+  background-color: $primary-color;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 37px;
+  .ant-tabs-tab-btn {
+    color: #fff !important;
+  }
+}
+
+.ant-tabs-ink-bar {
+  &.ant-tabs-ink-bar-animated {
+    width: 0px !important;
+  }
+}
+
+.btn:disabled {
+  background: #e6e7e9 !important;
+  color: #919294 !important;
+}
+
+.play-zone__turn--count {
+  color: #00b391;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+.play-zone {
+  .lucky-draw__btn {
+    &.lucky-draw__btn--play-now {
+      border-radius: 8px;
+      background-color: $primary-color;
+      color: #fff;
+      font-weight: bold;
+      width: 208px;
+    }
+    &.lucky-draw__btn--my-history {
+      .component_btn-text {
+        text-decoration: underline;
+        font-weight: bold;
+      }
+      &:hover {
+        border-radius: 8px;
+        background-color: #fbe5ea;
+        .component_btn-text {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+  .play-zone__prize--list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    .play-zone__prize--item {
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 24px;
+    }
+  }
+}
+
+.lucky-draw__history {
+  .lucky-draw__history--title {
+    color: $primary-color;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 24px;
+  }
+}

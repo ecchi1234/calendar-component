@@ -1,0 +1,19 @@
+@import "../../../../assets/scss/utils/mixins";
+/* Style for InputNumber.tsx */
+.advance-number-filter__container {
+    width: 100%;
+    border-radius: 7px;
+    .advance-number-filter__title {
+        @include input-title;
+    }
+    .advance-number-filter__wrapper {
+        width: 100%;
+        position: relative;
+        .advance-number-filter__icon {
+            @include input-icon;
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+}

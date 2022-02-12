@@ -1,0 +1,69 @@
+.web-phone {
+  position: relative;
+  width: 128px;
+  height: 64px;
+
+  button {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.web-phone-body {
+  position: absolute;
+  right: 0px;
+  bottom: 80px;
+
+  width: 360px;
+  height: 440px;
+  background: #ffffff;
+  border-radius: 7px;
+  color: #283c5c;
+  display: flex;
+  flex-direction: column;
+
+  header {
+    height: 56px;
+    width: 100%;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    color: #283c5c;
+    padding: 16px 19px;
+    text-transform: uppercase;
+
+    display: flex;
+    align-items: center;
+
+    border-bottom: 1px solid #e2e2ea;
+
+    img {
+      height: 18px;
+      width: 18px;
+      margin-right: 13px;
+
+      &:last-child {
+        margin-left: auto;
+        margin-right: 0;
+        cursor: pointer;
+      }
+    }
+  }
+
+  section {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    height: 386px;
+  }
+}

@@ -1,0 +1,118 @@
+@import "variables";
+
+@mixin variable-gradient($property, $gradient1, $gradient2) {
+  #{$property}: linear-gradient(
+    224.53deg,
+    var(--$gradient1, $gradient-primary-color) 0%,
+    var(--$gradient2, $gradient-secondary-color) 99.2%
+  );
+  #{$property}: -webkit-linear-gradient(
+    224.53deg,
+    var(--$gradient1, $gradient-primary-color) 0%,
+    var(--$gradient2, $gradient-secondary-color) 99.2%
+  );
+}
+
+@mixin variable($property, $value, $default-value) {
+  // #{$property}: var(--$value, $default-value);
+}
+
+@mixin background-color {
+  background-color: #b73853;
+  // @include variable-gradient(background, gradient-primary, gradient-secondary);
+}
+
+@mixin border-color {
+  @include variable-gradient(
+    border-image-source,
+    gradient-primary,
+    gradient-secondary
+  );
+  border-image-slice: 1;
+}
+
+@mixin border-radius-color {
+  @include variable(border-color, primary-color, $primary-color);
+}
+
+@mixin icon-color {
+  @include variable(color, primary-color, $primary-color);
+}
+
+@mixin gradient-text {
+  // @include variable-gradient(background, gradient-primary, gradient-secondary);
+  // -webkit-background-clip: text;
+  // -moz-background-clip: text;
+  // background-clip: text;
+  // -webkit-text-fill-color: transparent;
+  color: #333333;
+}
+
+@mixin white-text {
+  // background: $white;
+  // -webkit-background-clip: text;
+  // -moz-background-clip: text;
+  // background-clip: text;
+  // -webkit-text-fill-color: transparent;
+  color: #ffffff;
+}
+
+@mixin background-active-color {
+  // background: -webkit-linear-gradient(
+  //     0deg,
+  //     rgba(94, 129, 244, 0.1),
+  //     rgba(94, 129, 244, 0.1)
+  //   ),
+  //   #ffffff !important;
+  // background: linear-gradient(
+  //     0deg,
+  //     rgba(94, 129, 244, 0.1),
+  //     rgba(94, 129, 244, 0.1)
+  //   ),
+  //   #ffffff !important;
+  color: #b73853;
+  background-color: #fbe5ea;
+}
+
+@mixin input-title {
+  width: 100%;
+  font-size: 14px;
+  line-height: 150%;
+  color: #8181a5;
+  margin-bottom: 2px;
+}
+
+@mixin input-icon {
+  position: absolute;
+  right: 4%;
+  top: 30%;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+@mixin gradient-text-delete {
+  background: -moz-linear-gradient(180deg, $error-color 0%, $error-color 100%);
+  background: -webkit-linear-gradient(
+    180deg,
+    $error-color 0%,
+    $error-color 100%
+  );
+  background: linear-gradient(180deg, $error-color 0%, $error-color 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin background-color-delete {
+  background: -webkit-linear-gradient(
+    180deg,
+    $error-color 0%,
+    $error-color 100%
+  ) !important;
+  background: linear-gradient(
+    180deg,
+    $error-color 0%,
+    $error-color 100%
+  ) !important;
+}

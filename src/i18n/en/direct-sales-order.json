@@ -1,0 +1,16 @@
+{
+  "directSalesOrder.detail.create": "",
+  "directSalesOrder.deliveryDate": "",
+  "directSalesOrder.saleEmployee": "",
+  "directSalesOrder.directSalesOrderContent.item": "",
+  "directSalesOrder.directSalesOrderContent.quantity": "",
+  "directSalesOrder.directSalesOrderContent.salePrice": "",
+  "directSalesOrder.directSalesOrderContent.amount": "",
+  "directSalesOrder.orderDate": "",
+  "directSalesOrder.total": "",
+  "directSalesOrder.status": "",
+  "directSalesOrder.master.title": "",
+  "directSalesOrder.placeholder.code": "",
+  "directSalesOrder.totalRange": "",
+  "directSalesOrder.requestState": ""
+}

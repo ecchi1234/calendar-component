@@ -1,0 +1,131 @@
+@import "../../../assets/scss/utils/mixins";
+/* Style for Select.tsx */
+.tree-select__container {
+  width: 100%;
+  position: relative;
+
+  .tree-select__input {
+    width: 100%;
+  }
+  .tree-select__expand {
+    background-color: #fff;
+  }
+  .category__dropdown {
+    width: 1100px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: #ffffff;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.07);
+    z-index: 1000;
+
+    .category_footer {
+      background-color: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      padding: 0px 24px;
+      border-radius: 0px 0px 7px 7px;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.07);
+      .text-active {
+        color: #3f8cff;
+      }
+      .ant-breadcrumb {
+        @include gradient-text;
+      }
+    }
+  }
+
+  .categoty__list-container {
+    width: 100%;
+    height: 300px;
+    padding: 10px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 999;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.07);
+    // border-radius: 7px;
+
+    .category__list {
+      padding: 0px 5px;
+      width: inherit;
+      border-radius: 7px;
+      margin: 4px;
+      background-color: #ffffff;
+      max-width: 25%;
+      .component__input.component__input--material {
+        border-bottom: 1px solid #f2f4f6 !important;
+        padding-left: 4px !important;
+      }
+      .category__title {
+        padding: 4px 8px;
+        border-bottom: 1px solid #f2f4f6;
+        font-weight: 400;
+        color: #333333;
+      }
+      .category {
+        max-height: 180px;
+        overflow-y: auto;
+      }
+      .item-active {
+        background-color: #3f8cff !important;
+        .select__text {
+          color: #ffffff !important;
+        }
+      }
+      &.category__list-boder {
+        border: 1px solid #f2f4f6;
+      }
+      &.category__list-hidden {
+        display: none;
+      }
+      .component__input {
+        box-shadow: unset;
+        border-radius: unset;
+      }
+    }
+    .categoty__loading {
+      width: 100%;
+      min-height: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .category__item {
+      display: block;
+      background-color: #fff;
+      margin: 0px 10px;
+      font-size: 13px;
+      line-height: 32px;
+      height: 34px;
+      border-bottom: 1px solid #f2f4f6;
+      padding-left: 10%;
+      white-space: nowrap;
+
+      &:hover {
+        // @include background-active-color;
+        background: linear-gradient(
+            0deg,
+            rgba(94, 129, 244, 0.1),
+            rgba(94, 129, 244, 0.1)
+          ),
+          #ffffff;
+        .select__text {
+          @include gradient-text;
+        }
+      }
+    }
+    
+  }
+  .select__loading {
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

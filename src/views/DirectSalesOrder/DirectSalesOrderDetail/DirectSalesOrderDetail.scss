@@ -1,0 +1,64 @@
+.purchase-request__container {
+  .internal_order_detail-table {
+    .ant-table-body {
+      min-height: 350px !important;
+    }
+  }
+  .internal_order_detail-table {
+    margin-top: 20px;
+    .direct-sales-order__add-product-btn {
+      font-weight: bold;
+      color: #dd425a;
+      background-color: #fbe5ea;
+    }
+  }
+}
+
+.payment {
+  .ant-form-item-control input {
+    margin-top: 0 !important;
+  }
+  .ant-input-number-disabled {
+    background-color: #e4e7ea !important;
+  }
+  .ant-input-number-input {
+    // background-color: #e4e7ea;
+    padding-bottom: 2px;
+  }
+  .ant-form-item-control input {
+    margin-top: 0px;
+  }
+  .ant-form-item-children {
+    margin-right: 0 !important;
+  }
+  // .input-discount {
+  //   max-width: 25% !important;
+  // }
+  // .input-discount-amount {
+  //   max-width: 50% !important;
+  // }
+
+  .form-item__container .form-item__content {
+    align-items: center;
+  }
+  .title-label {
+    font-weight: bold;
+  }
+}
+
+.direct-sales-order__container {
+  .ant-card-head-title {
+    font-weight: bold;
+  }
+  .warning__text {
+    font-size: 14px;
+    color: #e91616;
+  }
+}
+
+.truncated-title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}

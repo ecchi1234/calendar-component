@@ -1,0 +1,118 @@
+.page__detail--approve {
+  .page__detail-tabs {
+    .general-field__container {
+      display: flex;
+      flex-direction: column;
+
+      .general-field__first-row {
+        span {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 12px;
+          line-height: 150%;
+          color: #979797;
+        }
+      }
+
+      .general-field__second-row {
+        .general-field__circle-image {
+          border-radius: 50%;
+          height: 32px;
+          width: 32px;
+          margin-right: 10px;
+        }
+
+        span {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 13px;
+          line-height: 18px;
+          color: #333333;
+        }
+      }
+    }
+  }
+
+  .ant-descriptions-item-container .ant-descriptions-item-content,
+  .ant-descriptions-item-container .ant-descriptions-item-label {
+    font-size: 13px;
+    color: #979797;
+  }
+}
+
+// Request
+.direct-sales-order-master,
+.direct-sales-order-preview,
+.direct-sales-order-approve {
+  @mixin state {
+    font-weight: 500;
+    padding: 5px 20px;
+    border-radius: 7px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+  }
+
+  .draft-state {
+    @include state();
+    color: #181819;
+    background: #f0f1f2;
+  }
+
+  .pending-state {
+    @include state();
+    background: #ffecb3;
+    color: #ffa000;
+  }
+
+  .completed-state {
+    @include state();
+    color: #00b391;
+    background: #e0f6f2;
+  }
+  .finish-state {
+    @include state();
+    color: #00a8f0;
+    background: #e1f5fd;
+  }
+
+  .cancel-state {
+    @include state();
+    color: #dd425a;
+    background: #fbe5ea;
+  }
+
+  .inprogress-state {
+    @include state();
+    color: #4a4de6;
+    background: #eaeafd;
+    width: 160px;
+  }
+}
+
+.direct-sales-order-preview {
+  .store-sales-order__description {
+    color: rgba(0, 0, 0, 0.85);
+  }
+  .store-sales-order__preview
+    .ant-descriptions-item-container
+    .ant-descriptions-item-label {
+    color: rgba(0, 0, 0, 0.85);
+  }
+  .store-sales-order__preview
+    .bold-title
+    .ant-descriptions-item-container
+    .ant-descriptions-item-label {
+    color: rgba(0, 0, 0, 0.85);
+    font-weight: 600;
+  }
+}
+
+.first-row--ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 250px;
+}

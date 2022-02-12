@@ -1,0 +1,37 @@
+.phone {
+  height: 100%;
+
+  .ant-tabs {
+    .ant-tabs-nav-wrap {
+
+      .ant-tabs-ink-bar {
+        background: #283c5c;
+      }
+
+      .ant-tabs-tab {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 16px;
+        text-align: center;
+
+        margin-right: 16px;
+        padding: 0;
+        padding-bottom: 9px;
+
+        &.ant-tabs-tab-active {
+          .ant-tabs-tab-btn {
+            font-weight: 600;
+          }
+        }
+
+        .ant-tabs-tab-btn {
+          background: #283c5c;
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: #283c5c;
+        }
+      }
+    }
+  }
+}
