@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import JsSIP, { Socket, WeightedSocket } from "jssip";
 import { RTCSession } from "jssip/lib/RTCSession";
 import { UA, UAConfiguration } from "jssip/lib/UA";

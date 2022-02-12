@@ -27,7 +27,6 @@ export function AppMainMasterTable(props: AppMainMasterTableProps) {
     handleTableChange,
     handlePagination,
     handleServerBulkDelete,
-    children,
   } = props;
 
   return (

@@ -13,6 +13,8 @@ import LuckyDrawDetailModal from "../LuckyDrawDetail/LuckyDrawDetailModal";
 import { limitWord } from "helpers/string";
 import { useHistory, useLocation } from "react-router";
 import path from "path";
+import Modal from "antd/lib/modal/Modal";
+import CalendarScheduler from "components/Utility/CalendarScheduler/CalendarScheduler";
 const { TabPane } = Tabs;
 const { Meta } = Card;
 
@@ -370,6 +372,11 @@ function LuckyDrawMaster() {
         tabNumber={filter["tabNumber"] ? filter["tabNumber"] : 1}
         handleClosePreview={handleClosePreview}
       />
+      <Modal width={1200} visible={true}>
+        <div style={{ padding: "10px" }}>
+          <CalendarScheduler />
+        </div>
+      </Modal>
     </div>
   );
 }

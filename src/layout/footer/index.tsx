@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { Container, Row, Col } from 'reactstrap'
+import { Container, Row, Col } from 'reactstrap';
 const Footer = (props) => {
   return (
     <Fragment>
@@ -14,6 +14,6 @@ const Footer = (props) => {
       </footer>
     </Fragment>
   );
-}
+};
 
 export default Footer;

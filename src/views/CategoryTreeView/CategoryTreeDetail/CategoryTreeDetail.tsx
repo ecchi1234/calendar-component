@@ -1,7 +1,7 @@
 import React from 'react';
 
 function CategoryTreeDetail(){
-    return (<></>)
+    return (<></>);
 }
 
 export default CategoryTreeDetail;

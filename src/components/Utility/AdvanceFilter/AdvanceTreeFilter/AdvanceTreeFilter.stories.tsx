@@ -57,6 +57,7 @@ const demoSearchFunc = (TModelFilter: ModelFilter) => {
 export function AdvanceTreeFilterStories() {
   const [listItem, dispatch] = React.useReducer(reducerFunc, demoList);
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [item, setItem] = React.useState<Model>(demoItem);
 
   const [isMultiple, setMultiple] = React.useState(false);

@@ -7,7 +7,6 @@ import { NumberFilter } from "@react3l/advanced-filters/NumberFilter";
 import {
   AdvanceFilterAction,
   advanceFilterReducer,
-  advanceFilterService,
 } from "services/advance-filter-service";
 import { Filter } from "@react3l/advanced-filters/Filter";
 import FormItem, { ValidateStatus } from "components/Utility/FormItem/FormItem";
@@ -27,6 +26,7 @@ export function InputNumberStories() {
 
   const [iconName, setIconName] = React.useState("");
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [filter, dispatch] = React.useReducer<
     Reducer<DemoFilter, AdvanceFilterAction<DemoFilter, Filter>>
   >(advanceFilterReducer, new DemoFilter());
@@ -42,7 +42,7 @@ export function InputNumberStories() {
       setNumberType(event.target.value);
       setValue(undefined);
     },
-    [setValue],
+    [setValue]
   );
 
   const handleChangeSeperation = React.useCallback(
@@ -50,7 +50,7 @@ export function InputNumberStories() {
       setIsReverse(event.target.value);
       setValue(undefined);
     },
-    [setValue],
+    [setValue]
   );
 
   const handleChangeStyle = React.useCallback(
@@ -61,7 +61,7 @@ export function InputNumberStories() {
         setIconName("tio-dollar");
       } else setIconName("");
     },
-    [setValue],
+    [setValue]
   );
 
   const handleChangePositive = React.useCallback(
@@ -69,7 +69,7 @@ export function InputNumberStories() {
       setIsPositive(event.target.value);
       setValue(undefined);
     },
-    [setValue],
+    [setValue]
   );
 
   React.useEffect(() => {}, [filter]);

@@ -79,7 +79,7 @@ export function AppMainMasterFilter(props: AppMainMasterFilterProps) {
         </Tooltip>
       </Menu.Item>
     </Menu>
-  ), [handleImportList, handleExportTemplateList, filter]);
+  ), [translate, importButtonRef, handleImportList, repository.import, repository.export, repository.exportTemplate, handleListExport, filter, handleExportTemplateList]);
 
   return (
     <>

@@ -1,16 +1,16 @@
-import { Model } from "@react3l/react3l/core";
-import { commonService } from "@react3l/react3l/services";
+// import { Model } from "@react3l/react3l/core";
+// import { commonService } from "@react3l/react3l/services";
 import { menu } from "config/menu";
-import { LOGIN_ROUTE } from "config/route-consts";
-import * as Cookie from "js-cookie";
+// import { LOGIN_ROUTE } from "config/route-consts";
+// import * as Cookie from "js-cookie";
 import { Reducer, useCallback, useEffect, useReducer } from "react";
-import { Subscription } from "rxjs";
-import appMessageService, { messageType } from "services/app-message-service";
-import authenticationService from "services/authentication-service";
+// import { Subscription } from "rxjs";
+import appMessageService from "services/app-message-service";
+// import authenticationService from "services/authentication-service";
 import { AppAction, AppActionEnum, appReducer, AppState } from "./app-store";
 
 export default function useApp() {
-  const [subscription] = commonService.useSubscription();
+  // const [subscription] = commonService.useSubscription();
   // reducer
   const [state, dispatch] = useReducer<Reducer<AppState, AppAction>>(
     appReducer,
@@ -44,43 +44,43 @@ export default function useApp() {
     displayOverlay,
   } = state;
 
-  const currentPath = `${LOGIN_ROUTE}?redirect=${window.location.pathname}`;
+  // const currentPath = `${LOGIN_ROUTE}?redirect=${window.location.pathname}`;
 
-  if (!Cookie.get("Token")) {
-    window.location.href = currentPath;
-  }
+  // if (!Cookie.get("Token")) {
+  //   window.location.href = currentPath;
+  // }
 
-  useEffect(() => {
-    subscription.add(
-      authenticationService.checkAuth().subscribe((user: Model) => {
-        if (user) return dispatch({ type: AppActionEnum.LOG_IN, user }); // if checkAuth success set login
-        window.location.href = currentPath; // if checkAuth fail, return login page
-      })
-    );
-  }, [currentPath, subscription]); // subscibe checkAuth
+  // useEffect(() => {
+  //   subscription.add(
+  //     authenticationService.checkAuth().subscribe((user: Model) => {
+  //       if (user) return dispatch({ type: AppActionEnum.LOG_IN, user }); // if checkAuth success set login
+  //       window.location.href = currentPath; // if checkAuth fail, return login page
+  //     })
+  //   );
+  // }, [currentPath, subscription]); // subscibe checkAuth
 
-  useEffect(() => {
-    const successSubscription: Subscription = appMessageService
-      ._success()
-      .subscribe(
-        appMessageService.handleNotify({
-          type: messageType.SUCCESS,
-          title: "thanh cong",
-        })
-      ); // subscribe success
+  // useEffect(() => {
+  //   const successSubscription: Subscription = appMessageService
+  //     ._success()
+  //     .subscribe(
+  //       appMessageService.handleNotify({
+  //         type: messageType.SUCCESS,
+  //         title: "thanh cong",
+  //       })
+  //     ); // subscribe success
 
-    const errorSubscription: Subscription = appMessageService
-      ._error()
-      .subscribe(
-        appMessageService.handleNotify({
-          type: messageType.ERROR,
-          title: "that bai",
-        })
-      ); // subscribe error
+  //   const errorSubscription: Subscription = appMessageService
+  //     ._error()
+  //     .subscribe(
+  //       appMessageService.handleNotify({
+  //         type: messageType.ERROR,
+  //         title: "that bai",
+  //       })
+  //     ); // subscribe error
 
-    subscription.add(successSubscription);
-    subscription.add(errorSubscription);
-  }, [subscription]); // subcribe appMessageService
+  //   subscription.add(successSubscription);
+  //   subscription.add(errorSubscription);
+  // }, [subscription]); // subcribe appMessageService
 
   const handleToggleOverlay = useCallback(() => {
     dispatch({

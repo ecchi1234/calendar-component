@@ -122,9 +122,12 @@ const Sidebar = (props) => {
         "page-header close_icon";
       document.querySelector(".sidebar-wrapper").className =
         "sidebar-wrapper close_icon ";
-      document
-        .querySelector(".mega-menu-container")
-        .classList.remove("d-block");
+      if (document.querySelector(".mega-menu-container")) {
+        document
+          .querySelector(".mega-menu-container")
+          .classList.remove("d-block");
+      }
+
       if (item.type === "sub") {
         document.querySelector(".page-header").className = "page-header ";
         document.querySelector(".sidebar-wrapper").className =

@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fullcalendar/daygrid": "^5.10.1",
+    "@fullcalendar/interaction": "^5.10.1",
+    "@fullcalendar/react": "^5.10.1",
     "@microsoft/signalr": "^3.1.7",
     "@react3l/advanced-filters": "^1.1.0",
     "@react3l/axios-observable": "^1.1.4",

@@ -7,12 +7,12 @@ const Loader = () => {
     
     useEffect(() => {
         const timeout = setTimeout(() => {
-            setShow(false)
+            setShow(false);
             }, 3000);
 
         return () => {
             clearTimeout(timeout);
-            }
+            };
        
     },[show]);
 
@@ -23,6 +23,6 @@ const Loader = () => {
              </div>
         </Fragment>
     );
-}
+};
 
 export default Loader;
